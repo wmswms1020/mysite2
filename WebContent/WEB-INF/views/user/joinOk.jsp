@@ -20,7 +20,7 @@
 
 			<!-- 
 			<ul>
-				<li>황일영 님 안녕하세요^^</li>
+				<li>소준호 님 안녕하세요^^</li>
 				<li><a href="" class="btn_s">로그아웃</a></li>
 				<li><a href="" class="btn_s">회원정보수정</a></li>
 			</ul>
@@ -89,7 +89,7 @@
 
 
 		<div id="footer">
-			Copyright ⓒ 2020 황일영. All right reserved
+			Copyright ⓒ 2022 소준호. All right reserved
 		</div>
 		<!-- //footer -->
 
