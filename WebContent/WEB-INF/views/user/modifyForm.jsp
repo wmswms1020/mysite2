@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.javaex.vo.UserVo" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
 	UserVo userVo = (UserVo)request.getAttribute("userVo");
 %>
@@ -101,20 +101,22 @@
 								<span class="form-text">성별</span> 
 								
 								
-								<%if(userVo.getGender().equals("male")){%>
-									<label for="rdo-male">남</label> 
-									<input type="radio" id="rdo-male" name="" value="" checked="checked"> 
-									
-									<label for="rdo-female">여</label> 
-								    <input type="radio" id="rdo-female" name="" value="" > 
-								<%}else {%>
-									<label for="rdo-male">남</label> 
-									<input type="radio" id="rdo-male" name="" value=""> 
-									
-									<label for="rdo-female">여</label> 
-								    <input type="radio" id="rdo-female" name="" value="" checked="checked">
-								<%}%>
-	
+								<c:choose>
+									<c:when test="${userVo.getGender().equals(male) }">		
+										<label for="rdo-male">남</label> 
+										<input type="radio" id="rdo-male" name="" value="" checked="checked"> 
+										
+										<label for="rdo-female">여</label> 
+									    <input type="radio" id="rdo-female" name="" value="" > 
+									</c:when>
+									<c:otherwise>
+										<label for="rdo-male">남</label> 
+										<input type="radio" id="rdo-male" name="" value=""> 
+										
+										<label for="rdo-female">여</label> 
+									    <input type="radio" id="rdo-female" name="" value="" checked="checked">
+									</c:otherwise>
+								</c:choose>
 							</div>
 	
 							<!-- 버튼영역 -->
