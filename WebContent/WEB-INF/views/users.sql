@@ -36,3 +36,5 @@ create sequence seq_board_no
 increment by 1
 start with 1
 nocache;
+  
+.
